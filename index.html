@@ -152,6 +152,69 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-javascript" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/10/04/javascript/">javascript</a>
+    </h1>
+  
+
+        
+        <a href="/2021/10/04/javascript/" class="archive-article-date">
+  	<time datetime="2021-10-04T02:57:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-10-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>(<code>)     #include&lt;bits/stdc++.h. (</code>)</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/10/04/javascript/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-test" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -183,7 +246,7 @@
 <li> 学习一条热化学方程式，包括反应物，生成物，焓变。如果这个热化学方程式和已有的知识矛盾，即根据一直的热化学方程式计算出的反应热与给出的反应热不同，则忽略这条方程式，并且输出There must be something wrong!</li>
 <li> 给出一条热化学方程式，请你计算出反应热。当然，为了避免精度误差，一切数字对$998244353$ 取膜，如果Rean的知识储备不足以算出反应热，请输出No answer.。</li>
 </ol>
-<p>如果你真的没学过热化学，你可以在\textbf{提示}中找到一些信息。</p>
+<p>如果你真的没学过热化学，你可以在提示中找到一些信息。</p>
 <h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>第一行两个正整数 $n,m$，表示物质数和指令数。</p>
 <p>接下来 $m$ 行，每行表示一个指令</p>
 <p>每行第一个整数为该指令的类型</p>
@@ -205,44 +268,6 @@
 <h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><h3 id="反应热"><a href="#反应热" class="headerlink" title="反应热"></a>反应热</h3><p>高中化学中，反应热（焓变）即为反应物的键能之和减去生成物的键能之和，键能就是断开化学键所需的能量</p>
 <p>值得注意的是，物质的状态会影响反应的焓变</p>
 <h3 id="盖斯定律"><a href="#盖斯定律" class="headerlink" title="盖斯定律"></a>盖斯定律</h3><p>也可表达为在条件不变的情况下，化学反应的反应热只与起始和终了状态有关，与变化途径无关。</p>
-<p>比如，碳燃烧的反应</p>
-<p>$C(s)+O_2(g) \longrightarrow CO_2(g)$</p>
-<p>与碳先变为一氧化碳，再变为二氧化碳</p>
-<p>$C(s)+\frac12 O_2(g)\longrightarrow CO(g)$　<br>$2 CO(g) + O_2(g) \longrightarrow 2 CO_2(g) $</p>
-<p>反应热是相同的</p>
-<h1 id="化学课走神-1"><a href="#化学课走神-1" class="headerlink" title="化学课走神"></a><strong>化学课走神</strong></h1><p>（chemistry.cpp）</p>
-<h2 id="背景-1"><a href="#背景-1" class="headerlink" title="背景"></a>背景</h2><h2 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h2><p>退役前，Rean对热化学一无所知。</p>
-<p>退役之后，Rean开始学习热化学。</p>
-<p>化学课上，化学老师会教Rean若干条热化学方程式，并且不时地要求Rean用已有知识计算一条新热化学方程式的反应热。</p>
-<p>由于Rean刚刚退役，所以他想请你帮他算一算</p>
-<p>具体来说，你需要完成以下任务</p>
-<p>化学课只涉及$n$种常见物质，编号为$0$到$n-1$，每种物质有 $3$ 种状态，分别是固态（s），液态（l）和气态（g），接着化学老师会给出m个指令操作，指令有两种</p>
-<ol>
-<li> 学习一条热化学方程式，包括反应物，生成物，焓变。如果这个热化学方程式和已有的知识矛盾，即根据一直的热化学方程式计算出的反应热与给出的反应热不同，则忽略这条方程式，并且输出There must be something wrong!</li>
-<li> 给出一条热化学方程式，请你计算出反应热。当然，为了避免精度误差，一切数字对$998244353$ 取膜，如果Rean的知识储备不足以算出反应热，请输出No answer.。</li>
-</ol>
-<p>如果你真的没学过热化学，你可以在\textbf{提示}中找到一些信息。</p>
-<h2 id="输入格式-1"><a href="#输入格式-1" class="headerlink" title="输入格式"></a>输入格式</h2><p>第一行两个正整数 $n,m$，表示物质数和指令数。</p>
-<p>接下来 $m$ 行，每行表示一个指令</p>
-<p>每行第一个整数为该指令的类型</p>
-<p>接下来 $2n$ 个整数，第$i$对数 $a_{2i-1}$ $a_{2i}$ 表示反应物 $i$ 的配平系数和状态( $0$ 表示固态，$1$ 表示液态，$2$ 表示气态)</p>
-<p>接下来 $2n$ 整数，第$i$对数 $b_{2i-1}$ $b_{2i}$ 表示生成物 $i$ 的配平系数和状态</p>
-<p>如果是 $1$ 号指令，接下来还会输入一个整数$\Delta H$，表示焓变</p>
-<h2 id="输出格式-1"><a href="#输出格式-1" class="headerlink" title="输出格式"></a>输出格式</h2><p>对每个$1$操作，如果和已知矛盾，请输出There must be something wrong!，否则没有输出</p>
-<p>对每个$2$操作， 请输出反应热，对 $1000081$ 取膜（如果条件不足输出 No answer.）</p>
-<h2 id="样例-1"><a href="#样例-1" class="headerlink" title="样例"></a>样例</h2><p>1 0 0 0<br>0 0 0 0<br>0 1 0 -2 -393</p>
-<p><strong>样例输入</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">4 4 1000081</span><br><span class="line">1 </span><br><span class="line">1 0 1 2 0 0 0 0</span><br><span class="line">0 0 0 0 0 0 1 2 </span><br><span class="line">999688</span><br><span class="line">1 </span><br><span class="line">2 0 1 2 0 0 0 0</span><br><span class="line">0 0 0 0 2 2 0 0</span><br><span class="line">999860</span><br><span class="line">2</span><br><span class="line">0 0 1 2 2 2 0 0</span><br><span class="line">0 0 0 0 0 0 2 2 </span><br><span class="line">1</span><br><span class="line">0 0 1 2 2 2 0 0</span><br><span class="line">0 0 0 0 0 0 2 2</span><br><span class="line">999515</span><br></pre></td></tr></table></figure>
-
-<p><strong>样例输出</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">999516</span><br><span class="line">There must be some thing wrong!</span><br></pre></td></tr></table></figure>
-
-<p><strong>样例解释</strong></p>
-<p>实际上就是这几条方程式<br>$$<br>\begin{align}<br>C(s) + O_2(g) &amp;\longrightarrow  CO_2(g)  &amp;\Delta H=-393 &amp;kJ/mol^{-1}\<br>2 C(s) + O_2(g) &amp;\longrightarrow  2 CO(g)  &amp;\Delta H=-221 &amp; kJ/mol^{-1}\<br>2 CO(g) + O_2(g) &amp;\longrightarrow 2 CO_2(g)   &amp;\Delta H=-565 &amp; kJ/mod^{-1}\<br>\end{align}<br>$$<br>其中1号物质为$C$，二号物质为$O_2$，三号物质为$CO$，四号物质为$CO_2$</p>
-<h2 id="数据范围-1"><a href="#数据范围-1" class="headerlink" title="数据范围"></a>数据范围</h2><p>$n\leq 125,m \leq 200$</p>
-<h2 id="提示-1"><a href="#提示-1" class="headerlink" title="提示"></a>提示</h2><h3 id="反应热-1"><a href="#反应热-1" class="headerlink" title="反应热"></a>反应热</h3><p>高中化学中，反应热（焓变）即为反应物的键能之和减去生成物的键能之和，键能就是断开化学键所需的能量</p>
-<p>值得注意的是，物质的状态会影响反应的焓变</p>
-<h3 id="盖斯定律-1"><a href="#盖斯定律-1" class="headerlink" title="盖斯定律"></a>盖斯定律</h3><p>也可表达为在条件不变的情况下，化学反应的反应热只与起始和终了状态有关，与变化途径无关。</p>
 <p>比如，碳燃烧的反应</p>
 <p>$C(s)+O_2(g) \longrightarrow CO_2(g)$</p>
 <p>与碳先变为一氧化碳，再变为二氧化碳</p>
